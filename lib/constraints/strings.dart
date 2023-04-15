@@ -9,8 +9,8 @@ String app_name = 'Nabin Shrestha';
 String gmail_address = "nabinstha246@gmail.com";
 
 //header logo
-String dark_mode_logo = "assets/logo_1.png";
-String light_mode_logo = "assets/logo_2.png";
+String dark_mode_logo = "assets/logo2.png";
+String light_mode_logo = "assets/logo2.png";
 
 //navItems name
 String home_index = "00. ";
