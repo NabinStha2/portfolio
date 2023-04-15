@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart';
+import 'package:universal_html/html.dart' as html;
 import 'package:client_portfolio/constraints/colors.dart';
 import 'package:client_portfolio/providers/themeProvider.dart';
 import 'package:client_portfolio/widgets/light_Dark_mode.dart';
@@ -87,8 +89,17 @@ class SideMenu extends StatelessWidget {
                               : light_index_color),
                     ),
                   ),
-                  onPressed: () {
-                    launchResume();
+                  onPressed: () async {
+                    final path = 'resume.pdf';
+
+                    var bytes = await rootBundle
+                        .load(path); // location of your asset file
+
+                    final blob = html.Blob([bytes], 'application/pdf');
+                    final url = html.Url.createObjectUrlFromBlob(blob);
+                    html.window.open(url, "_blank");
+                    html.Url.revokeObjectUrl(url);
+                    // launchResume();
                   }),
 
               const SizedBox(height: 30),
