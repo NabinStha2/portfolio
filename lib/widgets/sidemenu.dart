@@ -90,7 +90,7 @@ class SideMenu extends StatelessWidget {
                     ),
                   ),
                   onPressed: () async {
-                    final path = 'resume.pdf';
+                    final path = 'assets/resume.pdf';
 
                     var bytes = await rootBundle
                         .load(path); // location of your asset file

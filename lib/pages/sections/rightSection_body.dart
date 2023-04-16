@@ -27,7 +27,7 @@ class _SectionRightState extends State<SectionRight> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     linkColor = themeProvider.isDarkMode ? index_color : light_index_color;
-    desColor = themeProvider.isDarkMode ? salate_color : light_navy_color;
+    desColor = themeProvider.isDarkMode ? salate_color : light_primary_color;
 
     return Scaffold(
       body: Center(

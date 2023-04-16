@@ -80,6 +80,8 @@ flutter:
     - assets/logo_1.png
     - assets/logo_2.png
     - assets/logo2.png
+    - assets/light_logo.png
+    - assets/dark_logo.png
 
       #about section image
     - assets/picture.jpeg
